@@ -1,0 +1,39 @@
+<%- include('header'); %>
+
+    <body>
+        <link rel='stylesheet' href='/css/game.css' />
+        <div id="lobby" v-if="lobby">
+            <div v-for="i in 4">
+                <div>
+                    user{{i}}
+                    <label>waiting</label>
+                </div>
+            </div>
+            <button @click="ready">准备</button>
+        </div>
+        <div id="game" v-if="gameStart">
+            <!-- 9行 -->
+            <div v-for="i in 10">
+                <!-- 9列 -->
+                <div class="line">
+                    <div class="box" v-for="j in 10">
+                        <div class="point" :id="'p'+i+j"></div>
+                        <div class="vLine" :id="'v'+i+j" v-if="j<=9"></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="box" v-for="j in 10" v-if="i<=9">
+                        <div class="hLine" :id="'h'+i+j"></div>
+                        <div class="block" :id="'b'+i+j" v-if="j<=9"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="player1">P1</div>
+        </div>
+
+        <script src="js/lobby.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+
+    </html>

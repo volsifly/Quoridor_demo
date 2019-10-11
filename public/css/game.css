@@ -1,0 +1,54 @@
+/* test */
+* {
+/*     border:1px solid #f00; */
+       box-sizing: border-box;
+}
+.line{
+    margin:0px;
+    padding:  0px;
+    font-size:  0px;
+    /* display:  inline-block; */
+    white-space:  nowrap;
+}
+.box{
+    display: inline-block;
+    margin:  0px;
+    padding:  0px;
+}
+.point{
+    /* border:1px solid #abc; */
+    width:10px;
+    height:10px;
+    display:inline-block;
+    margin: 0px;
+}
+.vLine{
+    /* border:1px solid #abc; */
+    width: 100px;
+    height:10px;
+    display:inline-block;
+    background-color: #def;
+}
+.hLine{
+    /* border:1px solid #abc; */
+    width:10px;
+    height: 100px;
+    display:inline-block;
+    background-color:  #def;
+}
+.block{
+    border:1px solid #abc;
+    width:100px;
+    height:100px;
+    display:inline-block;
+}
+
+/* player */
+#player1{
+    width:75px;
+    height:75px;
+    border:1px solid #32f;
+    text-align:  center;
+    line-height:  75px;
+    position:  absolute;
+}
